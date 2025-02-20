@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playlist Vidio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Playlist Vidio</h1>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="video-container">
+                <iframe id="video-frame" width="100%" height="400" src="https://www.youtube.com/embed/X_b-wNkz4DU" 
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+                
+            </section>
+            <aside class="sidebar">
+                <h2>Trailer Vidio</h2>
+                <table>
+                    <tr>
+                        <th>Judul Video</th>
+                    </tr>
+                    <tr>
+                        <td>Dilan (1990)</td>
+                        <td><button onclick="gantiVideo('X_b-wNkz4DU')">Putar</button></td>
+                    </tr>
+                    <tr>
+                        <td>Ancika (1995)</td>
+                        <td><button onclick="gantiVideo('DbOa2bGLNWA')">Putar</button></td>
+                    </tr>
+                    <tr>
+                        <td>Rich Gant Movie (1997)</td>
+                        <td><button onclick="gantiVideo('OxLQZVmKWEo')">Putar</button></td>
+                    </tr>
+                    <tr>
+                        <td>Panggonan Wingit  2</td>
+                        <td><button onclick="gantiVideo('NuhPjtu_4lw')">Putar</button></td>
+                    </tr>
+                </table>
+            </aside>
+        </div>
+    </main>
+
+    <header>
+        <div id="marquee-container">
+            <span id="marquee-text">Selamat Menikmati Tayangan Berikut</span>
+            
+        </div>
+    </header>
+    
+    
+
+    <script>
+        function gantiVideo(videoID) {
+            document.getElementById("video-frame").src = "https://www.youtube.com/embed/" + videoID;
+        }
+    </script>
+</body>
+</html>
